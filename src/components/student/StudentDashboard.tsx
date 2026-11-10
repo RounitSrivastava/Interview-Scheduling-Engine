@@ -22,6 +22,7 @@ import { BeforeAfterComparison } from './BeforeAfterToggle';
 import confetti from 'canvas-confetti';
 import { INITIAL_TRACK_BADGES } from '../../data/mockData';
 import { InterviewStatus } from '../../types';
+import rounitPhoto from '../../assets/rounit-photo.png';
 
 export const StudentDashboard: React.FC = () => {
   const { 
@@ -40,6 +41,10 @@ export const StudentDashboard: React.FC = () => {
   );
 
   const track = INITIAL_TRACK_BADGES.find((t) => t.id === currentStudent.trackId) || INITIAL_TRACK_BADGES[0];
+
+  const studentName = currentStudent.id === 'stu-101' ? 'Rounit Srivastava' : currentStudent.name;
+  const studentRoll = currentStudent.id === 'stu-101' ? '21051042' : currentStudent.rollNumber;
+  const studentAvatar = currentStudent.id === 'stu-101' ? rounitPhoto : (currentStudent.avatar || rounitPhoto);
 
   const triggerCelebration = () => {
     confetti({
@@ -164,7 +169,7 @@ export const StudentDashboard: React.FC = () => {
               {/* Profile Photo */}
               <div className="relative mb-3.5">
                 <img
-                  src={currentStudent.avatar || '/student-photo.png'}
+                  src={currentStudent.id === 'stu-101' ? rounitPhoto : (currentStudent.avatar || rounitPhoto)}
                   alt={currentStudent.name}
                   className="w-28 h-28 rounded-3xl object-cover ring-4 ring-white shadow-md border border-[#E8E1D5]"
                 />
@@ -173,12 +178,12 @@ export const StudentDashboard: React.FC = () => {
 
               {/* Name & Roll */}
               <h1 className="text-xl font-heading font-black text-stone-900 tracking-tight flex items-center justify-center gap-1.5">
-                <span>{currentStudent.name}</span>
+                <span>{currentStudent.id === 'stu-101' ? 'Rounit Srivastava' : currentStudent.name}</span>
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 fill-emerald-100" />
               </h1>
               
               <div className="inline-flex items-center gap-1.5 mt-1 px-2.5 py-0.5 rounded-full bg-[#F4EFE6] text-stone-700 text-xs font-mono font-bold border border-[#DDD0BC]">
-                <span>Roll: {currentStudent.rollNumber}</span>
+                <span>Roll: {currentStudent.id === 'stu-101' ? '21051042' : currentStudent.rollNumber}</span>
               </div>
 
               {/* College Badge */}
@@ -375,7 +380,7 @@ export const StudentDashboard: React.FC = () => {
                     <span>🎯 Track Badge Unlocked: You are eligible for your Final Interview!</span>
                   </h3>
                   <p className="text-xs text-stone-700 leading-relaxed max-w-2xl font-medium font-sans">
-                    "Congratulations, <strong>{currentStudent.name}</strong>! You’ve cleared all 4 skill contests in the <strong>GenAI & Autonomous Agents Track</strong>. The final step to claim your verified <strong>Track Badge</strong> and <strong>+500 GRIT Miles</strong> is a 30-minute live code walkthrough with a senior engineer. Slots are available for the next 7 days. Pick your time slot now before capacity fills up."
+                    "Congratulations, <strong>{studentName}</strong>! You’ve cleared all 4 skill contests in the <strong>GenAI & Autonomous Agents Track</strong>. The final step to claim your verified <strong>Track Badge</strong> and <strong>+500 GRIT Miles</strong> is a 30-minute live code walkthrough with a senior engineer. Slots are available for the next 7 days. Pick your time slot now before capacity fills up."
                   </p>
                 </div>
                 

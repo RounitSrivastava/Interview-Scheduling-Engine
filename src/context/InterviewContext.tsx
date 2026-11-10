@@ -65,13 +65,36 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v2';
+const STORAGE_KEY = 'grit_interview_system_v5_rounit_kiit';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
   const [students, setStudents] = useState<Student[]>(() => {
+    // Clean old caches if any
+    try {
+      localStorage.removeItem('grit_interview_system_v1_students');
+      localStorage.removeItem('grit_interview_system_v2_students');
+    } catch (_) {}
+
     const saved = localStorage.getItem(`${STORAGE_KEY}_students`);
-    return saved ? JSON.parse(saved) : INITIAL_STUDENTS;
+    if (!saved) return INITIAL_STUDENTS;
+    try {
+      const parsed: Student[] = JSON.parse(saved);
+      return parsed.map((s) => 
+        s.id === 'stu-101' 
+          ? { 
+              ...s, 
+              name: 'Rounit Srivastava', 
+              rollNumber: '21051042', 
+              email: 'rounit.srivastava@kiit.ac.in', 
+              college: 'KIIT University, Bhubaneswar', 
+              avatar: '/rounit-photo.png' 
+            } 
+          : s
+      );
+    } catch {
+      return INITIAL_STUDENTS;
+    }
   });
 
   const [interviewers, setInterviewers] = useState<Interviewer[]>(() => {

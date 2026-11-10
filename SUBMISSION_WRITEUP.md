@@ -181,7 +181,7 @@ To make race conditions impossible under concurrent high load, we implement a **
 
 #### Message 1: Eligibility & Invitation to Book Slot
 > **Header:** 🎯 Track Badge Unlocked: You are eligible for your Final Interview!  
-> **Body:** "Congratulations, **Aryan**! You’ve cleared all 4 skill contests in the **GenAI & Autonomous Agents Track**. The final step to claim your verified **Track Badge** and **+500 GRIT Miles** is a 30-minute live code walkthrough with a senior engineer. Slots are available for the next 7 days. Pick your time slot now before capacity fills up."  
+> **Body:** "Congratulations, **Rounit**! You’ve cleared all 4 skill contests in the **GenAI & Autonomous Agents Track**. The final step to claim your verified **Track Badge** and **+500 GRIT Miles** is a 30-minute live code walkthrough with a senior engineer. Slots are available for the next 7 days. Pick your time slot now before capacity fills up."  
 > **Action:** `[Schedule Interview Slot →]`
 
 #### Message 2: Booking Confirmation & Technical Prep Guide

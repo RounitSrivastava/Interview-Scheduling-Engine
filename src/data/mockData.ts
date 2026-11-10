@@ -76,10 +76,10 @@ export const INITIAL_INTERVIEWERS: Interviewer[] = [
 export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-101',
-    name: 'Aryan Sharma',
+    name: 'Rounit Srivastava',
     rollNumber: '21051042',
-    email: 'aryan.21051042@kiit.ac.in',
-    avatar: '/student-photo.png',
+    email: 'rounit.srivastava@kiit.ac.in',
+    avatar: '/rounit-photo.png',
     college: 'KIIT University, Bhubaneswar',
     currentMiles: 2450,
     trackId: 'track-genai',

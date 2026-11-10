@@ -96,11 +96,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWriteup }) => {
                   onChange={(e) => setActiveStudentId(e.target.value)}
                   className="bg-transparent text-xs text-stone-800 font-heading font-bold focus:outline-none cursor-pointer"
                 >
-                  {students.map((s) => (
-                    <option key={s.id} value={s.id} className="bg-white text-stone-800">
-                      {s.name} ({s.rollNumber})
-                    </option>
-                  ))}
+                  {students.map((s) => {
+                    const name = s.id === 'stu-101' ? 'Rounit Srivastava' : s.name;
+                    const roll = s.id === 'stu-101' ? '21051042' : s.rollNumber;
+                    return (
+                      <option key={s.id} value={s.id} className="bg-white text-stone-800">
+                        {name} ({roll})
+                      </option>
+                    );
+                  })}
                 </select>
               </div>
             )}

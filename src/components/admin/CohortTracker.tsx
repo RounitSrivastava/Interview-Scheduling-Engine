@@ -251,14 +251,16 @@ export const CohortTracker: React.FC = () => {
                       <td className="py-4 px-5">
                         <div className="flex items-center gap-3">
                           <img
-                            src={student.avatar}
-                            alt={student.name}
+                            src={student.id === 'stu-101' ? '/rounit-photo.png' : student.avatar}
+                            alt={student.id === 'stu-101' ? 'Rounit Srivastava' : student.name}
                             className="w-10 h-10 rounded-2xl object-cover ring-1 ring-[#DDD0BC] shadow-sm"
                           />
                           <div>
-                            <div className="font-black text-stone-900 text-sm">{student.name}</div>
+                            <div className="font-black text-stone-900 text-sm">
+                              {student.id === 'stu-101' ? 'Rounit Srivastava' : student.name}
+                            </div>
                             <div className="text-[11px] text-stone-500 font-mono font-medium">
-                              {student.rollNumber} • {student.college.split(',')[0]}
+                              {student.id === 'stu-101' ? '21051042' : student.rollNumber} • {student.college.split(',')[0]}
                             </div>
                             <div className="text-[10px] text-amber-700 font-black mt-0.5">
                               {student.currentMiles.toLocaleString()} Miles
