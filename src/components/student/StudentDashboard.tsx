@@ -396,7 +396,7 @@ export const StudentDashboard: React.FC = () => {
               <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border border-orange-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm">🎯</span>
+                    <Award className="w-4 h-4 text-orange-600 flex-shrink-0" />
                     <h3 className="font-heading font-black text-orange-950 text-sm">
                       Prerequisites Complete: Ready for Live Code Walkthrough
                     </h3>
@@ -419,7 +419,7 @@ export const StudentDashboard: React.FC = () => {
               <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 border border-blue-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm">🗓️</span>
+                    <Calendar className="w-4 h-4 text-blue-600 flex-shrink-0" />
                     <h3 className="font-heading font-black text-blue-950 text-sm">
                       Walkthrough Scheduled: {activeBooking.date} at {activeBooking.startTime} IST
                     </h3>
@@ -444,7 +444,7 @@ export const StudentDashboard: React.FC = () => {
               <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 border border-emerald-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm">🏆</span>
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                     <h3 className="font-heading font-black text-emerald-950 text-sm">
                       Track Badge Verified & Awarded!
                     </h3>
@@ -464,7 +464,7 @@ export const StudentDashboard: React.FC = () => {
               <div className="p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm">🔄</span>
+                    <RotateCcw className="w-4 h-4 text-amber-600 flex-shrink-0" />
                     <h3 className="font-heading font-black text-amber-950 text-sm">
                       Targeted Retake Requested
                     </h3>
@@ -486,7 +486,7 @@ export const StudentDashboard: React.FC = () => {
             {currentStudent.interviewStatus === 'FAILED' && (
               <div className="p-4 sm:p-5 rounded-2xl bg-rose-50 border border-rose-200 text-xs text-rose-950 space-y-1">
                 <h3 className="font-heading font-black text-rose-950 text-sm flex items-center gap-2">
-                  <span>❌</span>
+                  <AlertCircle className="w-4 h-4 text-rose-600 flex-shrink-0" />
                   <span>Interview Unsuccessful — 14-Day Cooldown Active</span>
                 </h3>
                 <p className="text-stone-700 font-medium">
@@ -498,7 +498,7 @@ export const StudentDashboard: React.FC = () => {
             {currentStudent.interviewStatus === 'MALPRACTICE_FLAGGED' && (
               <div className="p-4 sm:p-5 rounded-2xl bg-red-50 border border-red-300 text-xs text-red-950 space-y-1">
                 <h3 className="font-heading font-black text-red-950 text-sm flex items-center gap-2">
-                  <span>⚠️</span>
+                  <ShieldAlert className="w-4 h-4 text-red-600 flex-shrink-0" />
                   <span>Honor Code Violation — Badge Nullified</span>
                 </h3>
                 <p className="text-stone-800 font-medium">
@@ -606,7 +606,8 @@ export const StudentDashboard: React.FC = () => {
 
                 <div className="space-y-2">
                   <h4 className="text-base font-heading font-black text-stone-900 flex items-center gap-2">
-                    <span>🎯 Track Badge Unlocked: You are eligible for your Final Interview!</span>
+                    <Award className="w-4 h-4 text-orange-600 flex-shrink-0" />
+                    <span>Track Badge Unlocked: You are eligible for your Final Interview!</span>
                   </h4>
                   <p className="text-xs text-stone-700 leading-relaxed font-sans bg-[#FAF7F2] p-4 rounded-xl border border-[#E8E1D5]">
                     "Congratulations, <strong>{studentName}</strong>! You’ve cleared all 4 skill contests in the <strong>GenAI & Autonomous Agents Track</strong>. The final step to claim your verified <strong>Track Badge</strong> and <strong>+500 GRIT Miles</strong> is a 30-minute live code walkthrough with a senior engineer. Slots are available for the next 7 days. Pick your time slot now before capacity fills up."
@@ -641,7 +642,8 @@ export const StudentDashboard: React.FC = () => {
 
                 <div className="space-y-2">
                   <h4 className="text-base font-heading font-black text-stone-900 flex items-center gap-2">
-                    <span>🗓️ Interview Confirmed: GenAI Track Badge Walkthrough</span>
+                    <Calendar className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                    <span>Interview Confirmed: GenAI Track Badge Walkthrough</span>
                   </h4>
                   <div className="text-xs text-stone-700 leading-relaxed font-sans bg-[#FAF7F2] p-4 rounded-xl border border-[#E8E1D5] space-y-2">
                     <p>
@@ -684,42 +686,45 @@ export const StudentDashboard: React.FC = () => {
                 </div>
 
                 <div className="space-y-3 font-sans">
-                  {/* Result variant 3A: PASSED */}
+                  {/* Result: PASSED */}
                   <div className={`p-4 rounded-xl border transition ${
                     currentStudent.interviewStatus === 'PASSED'
                       ? 'bg-emerald-50/90 border-emerald-300 ring-1 ring-emerald-200'
                       : 'bg-[#FAF7F2] border-[#E8E1D5]'
                   }`}>
                     <div className="flex items-center gap-2 text-xs font-bold text-emerald-900 mb-1">
-                      <span>🏆 Variant 3A: Passed (Badge Verified & Miles Awarded)</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700 flex-shrink-0" />
+                      <span>Passed (Track Badge Verified & Miles Awarded)</span>
                     </div>
                     <p className="text-xs text-stone-700 leading-relaxed">
                       "Phenomenal work! Siddharth (Accenture) has approved your submission with an overall score of <strong>9.2/10</strong>. Your <strong>GenAI & Autonomous Agents Track Badge</strong> is now active on your public profile, and <strong>+500 Miles</strong> have been credited to your rank. Keep up the grit!"
                     </p>
                   </div>
 
-                  {/* Result variant 3B: RETAKE */}
+                  {/* Result: RETAKE */}
                   <div className={`p-4 rounded-xl border transition ${
                     currentStudent.interviewStatus === 'RETAKE_REQUESTED'
                       ? 'bg-amber-50/90 border-amber-300 ring-1 ring-amber-200'
                       : 'bg-[#FAF7F2] border-[#E8E1D5]'
                   }`}>
                     <div className="flex items-center gap-2 text-xs font-bold text-amber-900 mb-1">
-                      <span>🔄 Variant 3B: Retake Later (Minor Refinements)</span>
+                      <RotateCcw className="w-3.5 h-3.5 text-amber-700 flex-shrink-0" />
+                      <span>Retake Later (Targeted Re-attempt)</span>
                     </div>
                     <p className="text-xs text-stone-700 leading-relaxed">
                       "Your interviewer noted great reasoning on Vector Search, but wants you to patch the agent tool memory boundaries before approving your badge. No cooldown applied—select a 15-minute quick retake slot within 5 days."
                     </p>
                   </div>
 
-                  {/* Result variant 3C: FAILED */}
+                  {/* Result: FAILED */}
                   <div className={`p-4 rounded-xl border transition ${
                     currentStudent.interviewStatus === 'FAILED'
                       ? 'bg-rose-50/90 border-rose-300 ring-1 ring-rose-200'
                       : 'bg-[#FAF7F2] border-[#E8E1D5]'
                   }`}>
                     <div className="flex items-center gap-2 text-xs font-bold text-rose-900 mb-1">
-                      <span>❌ Variant 3C: Failed (14-Day Cooldown)</span>
+                      <AlertCircle className="w-3.5 h-3.5 text-rose-700 flex-shrink-0" />
+                      <span>Failed (14-Day Learning Cooldown)</span>
                     </div>
                     <p className="text-xs text-stone-700 leading-relaxed">
                       "Thank you for your effort. The evaluator noted gaps in live debugging and RAG chunking trade-offs. Per NIAT guidelines, a 14-day learning cooldown is active. Your mentor has shared study modules in your portal."
@@ -727,8 +732,9 @@ export const StudentDashboard: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="text-[11px] text-stone-500 pt-1">
-                  💡 <em>Use the State Simulator above to watch the candidate view update live.</em>
+                <div className="text-[11px] text-stone-500 pt-1 flex items-center gap-1.5 font-medium">
+                  <Check className="w-3.5 h-3.5 text-emerald-600" />
+                  <span>Use the State Simulator above to observe the candidate dashboard update live for each outcome.</span>
                 </div>
               </div>
             )}
