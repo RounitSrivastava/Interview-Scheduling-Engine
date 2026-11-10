@@ -1,7 +1,8 @@
 # GRIT Track Badge Interview Scheduling Engine — Product & Architecture Specification
 
 **Author:** AI Product Engineer Candidate  
-**Program:** Global Readiness Immersion Trips (GRIT) — National Institute of Applied Technology (NIAT)  
+**Program:** Global Readiness Immersion Trips (GRIT) — KIIT University & NIAT Engineering Initiative  
+**Student Cohort:** School of Computer Engineering, KIIT University, Bhubaneswar  
 **Deliverable:** 2-Page Executive Technical & Product Write-Up  
 **Live Working Prototype:** Built with React 18, TypeScript, Tailwind CSS (Interactive Multi-Persona Application)
 

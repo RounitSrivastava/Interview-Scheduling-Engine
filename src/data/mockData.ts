@@ -77,10 +77,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-101',
     name: 'Aryan Sharma',
-    rollNumber: '21BCE1042',
-    email: 'aryan.sharma@niat.ac.in',
-    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Institute of Tech, Hyderabad',
+    rollNumber: '21051042',
+    email: 'aryan.21051042@kiit.ac.in',
+    avatar: '/student-photo.png',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 2450,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -91,10 +91,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-102',
     name: 'Sneha Patel',
-    rollNumber: '21BCE1180',
-    email: 'sneha.patel@niat.ac.in',
+    rollNumber: '21051180',
+    email: 'sneha.21051180@kiit.ac.in',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Campus Bengaluru',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 2600,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -106,10 +106,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-103',
     name: 'Vikram Malhotra',
-    rollNumber: '21BCS0914',
-    email: 'vikram.m@niat.ac.in',
+    rollNumber: '21050914',
+    email: 'vikram.21050914@kiit.ac.in',
     avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Delhi NCR',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 3100,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -121,10 +121,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-104',
     name: 'Rohan Mehta',
-    rollNumber: '21BCE0755',
-    email: 'rohan.mehta@niat.ac.in',
+    rollNumber: '21050755',
+    email: 'rohan.21050755@kiit.ac.in',
     avatar: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Pune Hub',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 1980,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -135,10 +135,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-105',
     name: 'Tanya Reddy',
-    rollNumber: '21BCE1342',
-    email: 'tanya.reddy@niat.ac.in',
+    rollNumber: '21051342',
+    email: 'tanya.21051342@kiit.ac.in',
     avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Hyderabad',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 2200,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -150,10 +150,10 @@ export const INITIAL_STUDENTS: Student[] = [
   {
     id: 'stu-106',
     name: 'Devansh Joshi',
-    rollNumber: '21BCS1501',
-    email: 'devansh.j@niat.ac.in',
+    rollNumber: '21051501',
+    email: 'devansh.21051501@kiit.ac.in',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
-    college: 'NIAT Jaipur',
+    college: 'KIIT University, Bhubaneswar',
     currentMiles: 2950,
     trackId: 'track-genai',
     skillsCompleted: 4,
@@ -169,9 +169,9 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
     id: 'book-201',
     studentId: 'stu-102',
     studentName: 'Sneha Patel',
-    studentEmail: 'sneha.patel@niat.ac.in',
-    studentRollNumber: '21BCE1180',
-    studentCollege: 'NIAT Campus Bengaluru',
+    studentEmail: 'sneha.21051180@kiit.ac.in',
+    studentRollNumber: '21051180',
+    studentCollege: 'KIIT University, Bhubaneswar',
     trackId: 'track-genai',
     trackTitle: 'GenAI & Autonomous Agents',
     interviewerId: 'int-1',
@@ -190,9 +190,9 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
     id: 'book-202',
     studentId: 'stu-103',
     studentName: 'Vikram Malhotra',
-    studentEmail: 'vikram.m@niat.ac.in',
-    studentRollNumber: '21BCS0914',
-    studentCollege: 'NIAT Delhi NCR',
+    studentEmail: 'vikram.21050914@kiit.ac.in',
+    studentRollNumber: '21050914',
+    studentCollege: 'KIIT University, Bhubaneswar',
     trackId: 'track-genai',
     trackTitle: 'GenAI & Autonomous Agents',
     interviewerId: 'int-1',
@@ -224,9 +224,9 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
     id: 'book-203',
     studentId: 'stu-105',
     studentName: 'Tanya Reddy',
-    studentEmail: 'tanya.reddy@niat.ac.in',
-    studentRollNumber: '21BCE1342',
-    studentCollege: 'NIAT Hyderabad',
+    studentEmail: 'tanya.21051342@kiit.ac.in',
+    studentRollNumber: '21051342',
+    studentCollege: 'KIIT University, Bhubaneswar',
     trackId: 'track-genai',
     trackTitle: 'GenAI & Autonomous Agents',
     interviewerId: 'int-2',
@@ -258,9 +258,9 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
     id: 'book-204',
     studentId: 'stu-106',
     studentName: 'Devansh Joshi',
-    studentEmail: 'devansh.j@niat.ac.in',
-    studentRollNumber: '21BCS1501',
-    studentCollege: 'NIAT Jaipur',
+    studentEmail: 'devansh.21051501@kiit.ac.in',
+    studentRollNumber: '21051501',
+    studentCollege: 'KIIT University, Bhubaneswar',
     trackId: 'track-genai',
     trackTitle: 'GenAI & Autonomous Agents',
     interviewerId: 'int-3',
@@ -290,23 +290,20 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
   }
 ];
 
-// Helper to generate dynamic bookable slots for the next 7 days
 export const generateAvailableSlots = (): Slot[] => {
   const slots: Slot[] = [];
   const today = new Date();
   
-  // Create slots for the next 5 weekdays
   for (let d = 1; d <= 5; d++) {
     const targetDate = new Date(today);
     targetDate.setDate(today.getDate() + d);
     const dayOfWeek = targetDate.getDay();
-    if (dayOfWeek === 0 || dayOfWeek === 6) continue; // Skip weekends
+    if (dayOfWeek === 0 || dayOfWeek === 6) continue;
     
     const dateStr = targetDate.toISOString().split('T')[0];
     
     INITIAL_INTERVIEWERS.forEach((interviewer) => {
       interviewer.timeSlots.forEach((time, idx) => {
-        // Reserve one slot for Sneha's mock booking
         if (d === 2 && interviewer.id === 'int-1' && time === '04:30 PM') {
           slots.push({
             id: 'slot-pre-1',
@@ -328,7 +325,7 @@ export const generateAvailableSlots = (): Slot[] => {
           interviewerTitle: interviewer.title,
           date: dateStr,
           startTime: time,
-          endTime: time.replace('00', '30').replace('30', '00'), // approximate 30m
+          endTime: time.replace('00', '30').replace('30', '00'),
           status: 'AVAILABLE'
         });
       });
@@ -337,4 +334,3 @@ export const generateAvailableSlots = (): Slot[] => {
 
   return slots;
 };
-

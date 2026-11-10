@@ -27,16 +27,16 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
             </span>
             <span className="text-xs text-stone-500 font-medium">• Assignment Requirement</span>
           </div>
-          <h2 className="text-lg font-black text-stone-900 mt-1">
+          <h2 className="text-lg font-heading font-black text-stone-900 mt-1">
             Student Home Screen: Before vs. After Interview Result
           </h2>
-          <p className="text-xs text-stone-500">
-            Compare how the dashboard transforms once the interviewer records a passing outcome and verifies the badge.
+          <p className="text-xs text-stone-500 font-sans">
+            Compare how the KIIT dashboard transforms once the interviewer records a passing outcome and verifies the badge.
           </p>
         </div>
 
         {/* View Mode Switcher */}
-        <div className="flex items-center bg-[#F0EAE1] border border-[#DFD5C4] p-1 rounded-xl">
+        <div className="flex items-center bg-[#F0EAE1] border border-[#DFD5C4] p-1 rounded-xl font-heading">
           <button
             onClick={() => setViewMode('SPLIT')}
             className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${
@@ -194,7 +194,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
               <div className="p-3.5 rounded-xl bg-[#FAF7F2] border border-[#E8E1D5] flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <FileCheck2 className="w-4 h-4 text-emerald-700" />
-                  <span className="text-xs text-stone-800 font-bold">Official NIAT Certificate Ready</span>
+                  <span className="text-xs text-stone-800 font-bold">Official KIIT Credential Ready</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <button className="text-xs font-bold text-white bg-indigo-700 hover:bg-indigo-600 px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm transition">

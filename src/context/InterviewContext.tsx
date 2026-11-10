@@ -65,7 +65,7 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v1';
+const STORAGE_KEY = 'grit_interview_system_v2';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
