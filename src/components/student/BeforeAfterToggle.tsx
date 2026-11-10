@@ -22,10 +22,10 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 border-b border-[#E8E1D5]">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-orange-100 text-orange-800 border border-orange-200">
-              Interactive Design Deliverable
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-emerald-100 text-emerald-800 border border-emerald-200">
+              Dashboard Evolution
             </span>
-            <span className="text-xs text-stone-500 font-medium">• Assignment Requirement</span>
+            <span className="text-xs text-stone-500 font-medium">• Live State Transition</span>
           </div>
           <h2 className="text-lg font-heading font-black text-stone-900 mt-1">
             Student Home Screen: Before vs. After Interview Result

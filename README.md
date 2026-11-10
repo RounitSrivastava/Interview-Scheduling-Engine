@@ -28,7 +28,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 | Deliverable | Location in Repository | Interactive in Prototype |
 | :--- | :--- | :--- |
-| **1. 2-Page Write-Up** | [`SUBMISSION_WRITEUP.md`](./SUBMISSION_WRITEUP.md) | Accessible anytime via the **"2-Page Write-Up"** button in the top navigation bar (with print/PDF export). |
+| **1. 2-Page Write-Up** | [`SUBMISSION_WRITEUP.md`](./SUBMISSION_WRITEUP.md) | Formatted 2-page document ready for email or form attachment. |
 | **2. States Lifecycle & Diagram** | Page 1 of Write-Up | Visualized in the prototype with an **Interactive State Simulator** on the Student Dashboard. |
 | **3. Edge Cases & Assumptions** | Page 1 of Write-Up | Handled in code (no-shows, cooling periods, 6h reschedule window, post-award malpractice). |
 | **4. Data Model & Concurrency** | Page 2 of Write-Up | Relational SQL schema, composite constraints, and pessimistic row locking (`SELECT ... FOR UPDATE`). |

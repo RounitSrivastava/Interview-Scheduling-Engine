@@ -1,9 +1,9 @@
 # GRIT Track Badge Interview Scheduling Engine — Product & Architecture Specification
 
-**Author:** AI Product Engineer Candidate  
+**Candidate:** Rounit Srivastava (Roll: 21051042)  
 **Program:** Global Readiness Immersion Trips (GRIT) — KIIT University & NIAT Engineering Initiative  
 **Student Cohort:** School of Computer Engineering, KIIT University, Bhubaneswar  
-**Deliverable:** 2-Page Executive Technical & Product Write-Up  
+**Deliverable:** Write up of (2 pages max)  
 **Live Working Prototype:** Built with React 18, TypeScript, Tailwind CSS (Interactive Multi-Persona Application)
 
 ---

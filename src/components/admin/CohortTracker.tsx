@@ -73,7 +73,7 @@ export const CohortTracker: React.FC = () => {
             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-emerald-100 text-emerald-800 border border-emerald-200">
               Operations Control
             </span>
-            <span className="text-xs text-stone-500">• Assignment Requirement</span>
+            <span className="text-xs text-stone-500 font-medium">• Cohort Monitoring</span>
           </div>
           <h1 className="text-xl sm:text-2xl font-black text-stone-900 mt-1">
             Cohort Interview Funnel & Integrity Management

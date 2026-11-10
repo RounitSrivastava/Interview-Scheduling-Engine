@@ -351,13 +351,13 @@ export const StudentDashboard: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-heading font-extrabold uppercase tracking-wider mb-1">
                   <BookOpen className="w-3.5 h-3.5" />
-                  <span>Assignment Deliverable: Student Messages</span>
+                  <span>Interview Communications</span>
                 </div>
                 <h2 className="text-lg font-heading font-black text-stone-900">
-                  The 3 Most Critical Messages in the Candidate Flow
+                  Key Candidate Notifications & Updates
                 </h2>
                 <p className="text-xs text-stone-500 font-sans">
-                  Written exactly as they appear to KIIT engineering students in the production interface.
+                  Official status alerts and action triggers for your interview lifecycle at KIIT.
                 </p>
               </div>
             </div>

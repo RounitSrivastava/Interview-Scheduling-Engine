@@ -55,7 +55,7 @@ export const AvailabilityManager: React.FC = () => {
             <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-orange-100 text-orange-800 border border-orange-200">
               Interviewer Control
             </span>
-            <span className="text-xs text-stone-500">• Assignment Requirement</span>
+            <span className="text-xs text-stone-500 font-medium">• Capacity Calendar</span>
           </div>
           <h2 className="text-lg font-black text-stone-900 mt-1">
             Manage Availability & Weekly Schedule

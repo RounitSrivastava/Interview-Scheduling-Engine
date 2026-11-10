@@ -65,18 +65,28 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v6_rounit_kiit';
+const STORAGE_KEY = 'grit_interview_system_v8_rounit_kiit';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
   const [students, setStudents] = useState<Student[]>(() => {
     // Clean old caches if any
     try {
-      localStorage.removeItem('grit_interview_system_v1_students');
-      localStorage.removeItem('grit_interview_system_v2_students');
-      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_students');
-      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_bookings');
-      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_interviewers');
+      const keysToClean = [
+        'grit_interview_system_v1_students',
+        'grit_interview_system_v2_students',
+        'grit_interview_system_v5_rounit_kiit_students',
+        'grit_interview_system_v5_rounit_kiit_bookings',
+        'grit_interview_system_v5_rounit_kiit_interviewers',
+        'grit_interview_system_v6_rounit_kiit_students',
+        'grit_interview_system_v6_rounit_kiit_bookings',
+        'grit_interview_system_v6_rounit_kiit_interviewers',
+        'grit_interview_system_v6_rounit_kiit_slots',
+        'grit_interview_system_v6_rounit_kiit_audit',
+        'grit_interview_system_v7_rounit_kiit_students',
+        'grit_interview_system_v7_rounit_kiit_bookings'
+      ];
+      keysToClean.forEach(k => localStorage.removeItem(k));
     } catch (_) {}
 
     const saved = localStorage.getItem(`${STORAGE_KEY}_students`);
@@ -136,7 +146,7 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   });
 
   const [currentPersona, setCurrentPersona] = useState<Persona>('STUDENT');
-  const [activeStudentId, setActiveStudentId] = useState<string>('stu-101'); // Aryan Sharma
+  const [activeStudentId, setActiveStudentId] = useState<string>('stu-101'); // Rounit Srivastava (KIIT)
   const [activeInterviewerId, setActiveInterviewerId] = useState<string>('int-1'); // Siddharth Roy
   const [beforeAfterMode, setBeforeAfterMode] = useState<'BEFORE' | 'AFTER'>('BEFORE');
   const [toasts, setToasts] = useState<Toast[]>([]);
