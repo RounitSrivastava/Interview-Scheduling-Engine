@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setCurrentPersona('ADMIN_OPS')}
               className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-heading font-bold transition-all duration-200 ${
                 currentPersona === 'ADMIN_OPS'
-                  ? 'bg-gradient-to-r from-emerald-600 to-teal-700 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-sm'
                   : 'text-stone-600 hover:text-stone-900 hover:bg-white/50'
               }`}
             >
