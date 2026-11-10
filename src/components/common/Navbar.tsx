@@ -3,7 +3,7 @@ import { useInterview } from '../../context/InterviewContext';
 import { 
   GraduationCap, 
   CalendarCheck, 
-  ShieldCheck, 
+  Users, 
   RotateCcw
 } from 'lucide-react';
 
@@ -75,8 +75,8 @@ export const Navbar: React.FC = () => {
                   : 'text-stone-600 hover:text-stone-900 hover:bg-white/50'
               }`}
             >
-              <ShieldCheck className="w-4 h-4" />
-              <span>Ops & Integrity</span>
+              <Users className="w-4 h-4" />
+              <span>Interview Team</span>
             </button>
           </div>
 
