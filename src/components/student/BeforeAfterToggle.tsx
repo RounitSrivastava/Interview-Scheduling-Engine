@@ -120,8 +120,8 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
               {/* Action Banner */}
               <div className="p-3.5 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-bold text-orange-950 block">Upcoming Call with Siddharth Roy</span>
-                  <span className="text-[11px] text-orange-800">Thursday, Nov 14 at 4:30 PM IST (30 mins)</span>
+                  <span className="text-xs font-bold text-orange-950 block">Upcoming Walkthrough with Siddharth Roy (Accenture)</span>
+                  <span className="text-[11px] text-orange-800">Thursday, Nov 12 at 4:30 PM IST (30 mins)</span>
                 </div>
                 <span className="text-xs font-bold text-orange-700 px-3 py-1 rounded-lg bg-white border border-orange-300 shadow-sm">
                   Prep Checklist Active
@@ -182,7 +182,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
                     <h4 className="font-black text-stone-900 text-sm">GenAI & Autonomous Agents Specialist</h4>
                   </div>
                   <p className="text-xs text-emerald-900 mt-1 font-medium">
-                    Evaluated by Siddharth Roy • Overall Rubric: <strong className="text-emerald-950 font-black">9.2 / 10</strong>
+                    Evaluated by Siddharth Roy (Accenture) • Overall Rubric: <strong className="text-emerald-950 font-black">9.2 / 10</strong>
                   </p>
                   <p className="text-[10px] font-mono text-stone-600 mt-1 font-semibold">
                     Credential ID: <span className="text-indigo-800">GRIT-AI-9942-VERIFIED</span>
