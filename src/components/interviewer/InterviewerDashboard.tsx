@@ -129,18 +129,11 @@ export const InterviewerDashboard: React.FC = () => {
                   className="bg-white border border-[#E8E1D5] hover:border-[#D8CEBF] rounded-2xl p-6 shadow-sm transition flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
                 >
                   <div className="flex items-start gap-4">
-                    {b.studentId === 'stu-101' || b.studentName === 'Rounit Srivastava' ? (
-                      <img
-                        src="/rounit-photo.png"
-                        alt="Rounit Srivastava"
-                        className="w-14 h-14 rounded-2xl object-cover ring-2 ring-orange-200 border border-[#E8E1D5] shadow-sm flex-shrink-0"
-                      />
-                    ) : (
-                      <div className="w-14 h-14 rounded-2xl bg-orange-100 text-orange-800 border border-orange-200 flex flex-col items-center justify-center font-black text-xs shadow-sm flex-shrink-0">
-                        <Clock className="w-4 h-4 mb-0.5" />
-                        <span>{b.startTime.split(' ')[0]}</span>
-                      </div>
-                    )}
+                    <img
+                      src="/rounit-photo.png"
+                      alt={b.studentName}
+                      className="w-14 h-14 rounded-2xl object-cover ring-2 ring-orange-200 border border-[#E8E1D5] shadow-sm flex-shrink-0"
+                    />
 
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">

@@ -65,7 +65,7 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v9_rounit_kiit_accenture';
+const STORAGE_KEY = 'grit_interview_system_v10_rounit_kiit_accenture_photos';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
@@ -89,7 +89,9 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         'grit_interview_system_v8_rounit_kiit_bookings',
         'grit_interview_system_v8_rounit_kiit_interviewers',
         'grit_interview_system_v8_rounit_kiit_slots',
-        'grit_interview_system_v8_rounit_kiit_audit'
+        'grit_interview_system_v8_rounit_kiit_audit',
+        'grit_interview_system_v9_rounit_kiit_accenture_students',
+        'grit_interview_system_v9_rounit_kiit_accenture_bookings'
       ];
       keysToClean.forEach(k => localStorage.removeItem(k));
     } catch (_) {}
@@ -98,18 +100,17 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     if (!saved) return INITIAL_STUDENTS;
     try {
       const parsed: Student[] = JSON.parse(saved);
-      return parsed.map((s) => 
-        s.id === 'stu-101' 
-          ? { 
-              ...s, 
-              name: 'Rounit Srivastava', 
-              rollNumber: '23051042', 
-              email: 'rounit.srivastava@kiit.ac.in', 
-              college: 'KIIT University, Bhubaneswar', 
-              avatar: '/rounit-photo.png' 
-            } 
-          : s
-      );
+      return parsed.map((s) => ({
+        ...s,
+        avatar: '/rounit-photo.png',
+        ...(s.id === 'stu-101' ? {
+          name: 'Rounit Srivastava',
+          rollNumber: '23051042',
+          email: 'rounit.srivastava@kiit.ac.in',
+          college: 'KIIT University, Bhubaneswar',
+          avatar: '/rounit-photo.png'
+        } : {})
+      }));
     } catch {
       return INITIAL_STUDENTS;
     }

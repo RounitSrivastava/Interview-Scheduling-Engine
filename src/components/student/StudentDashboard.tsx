@@ -49,7 +49,7 @@ export const StudentDashboard: React.FC = () => {
 
   const studentName = currentStudent.id === 'stu-101' ? 'Rounit Srivastava' : currentStudent.name;
   const studentRoll = currentStudent.id === 'stu-101' ? '23051042' : currentStudent.rollNumber;
-  const studentAvatar = currentStudent.id === 'stu-101' ? rounitPhoto : (currentStudent.avatar || rounitPhoto);
+  const studentAvatar = rounitPhoto;
 
   const triggerCelebration = () => {
     confetti({

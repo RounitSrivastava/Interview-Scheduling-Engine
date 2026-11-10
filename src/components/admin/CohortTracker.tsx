@@ -251,8 +251,8 @@ export const CohortTracker: React.FC = () => {
                       <td className="py-4 px-5">
                         <div className="flex items-center gap-3">
                           <img
-                            src={student.id === 'stu-101' ? '/rounit-photo.png' : student.avatar}
-                            alt={student.id === 'stu-101' ? 'Rounit Srivastava' : student.name}
+                            src="/rounit-photo.png"
+                            alt={student.name}
                             className="w-10 h-10 rounded-2xl object-cover ring-1 ring-[#DDD0BC] shadow-sm"
                           />
                           <div>
