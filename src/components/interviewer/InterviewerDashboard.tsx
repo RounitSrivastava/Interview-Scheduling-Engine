@@ -40,7 +40,7 @@ export const InterviewerDashboard: React.FC = () => {
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-xl sm:text-2xl font-black text-stone-900">{activeInterviewer.name}</h1>
-              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200">
+              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">
                 Official Evaluator
               </span>
             </div>
@@ -141,7 +141,7 @@ export const InterviewerDashboard: React.FC = () => {
                         <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#F4EFE6] text-stone-700 border border-[#DDD0BC]">
                           {b.studentRollNumber}
                         </span>
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 border border-indigo-200">
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-orange-100 text-orange-800 border border-orange-200">
                           {b.trackTitle}
                         </span>
                       </div>
@@ -170,7 +170,7 @@ export const InterviewerDashboard: React.FC = () => {
 
                     <button
                       onClick={() => setEvaluatingBooking(b)}
-                      className="flex-1 lg:flex-none px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-700 to-purple-700 hover:from-indigo-800 hover:to-purple-800 text-white text-xs font-black shadow-md shadow-indigo-700/20 flex items-center justify-center gap-2 transition"
+                      className="flex-1 lg:flex-none px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white text-xs font-black shadow-md shadow-orange-600/20 flex items-center justify-center gap-2 transition"
                     >
                       <Award className="w-4 h-4" />
                       <span>Record Outcome (Pass, Fail, Retake)</span>

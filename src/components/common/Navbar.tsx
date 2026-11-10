@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setCurrentPersona('INTERVIEWER')}
               className={`flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-heading font-bold transition-all duration-200 ${
                 currentPersona === 'INTERVIEWER'
-                  ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-sm'
+                  ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-sm'
                   : 'text-stone-600 hover:text-stone-900 hover:bg-white/50'
               }`}
             >

@@ -91,7 +91,7 @@ export const CohortTracker: React.FC = () => {
         <div className="bg-white border border-[#E8E1D5] rounded-3xl p-5 shadow-sm">
           <div className="flex items-center justify-between text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">
             <span>Total Eligible</span>
-            <Users className="w-4 h-4 text-indigo-700" />
+            <Users className="w-4 h-4 text-orange-700" />
           </div>
           <div className="text-2xl font-black text-stone-900">{totalEligible}</div>
           <p className="text-[11px] text-stone-500 mt-1 font-medium">100% skills cleared</p>
@@ -215,7 +215,7 @@ export const CohortTracker: React.FC = () => {
               placeholder="Search candidate name, roll no..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-white border border-[#E8E1D5] rounded-xl pl-9 pr-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-indigo-600 shadow-sm"
+              className="w-full bg-white border border-[#E8E1D5] rounded-xl pl-9 pr-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-orange-500 shadow-sm"
             />
           </div>
 
@@ -318,7 +318,7 @@ export const CohortTracker: React.FC = () => {
                               <CheckCircle2 className="w-3 h-3 text-emerald-700" />
                               <span>Passed (Badge Issued)</span>
                             </span>
-                            <p className="text-[10px] text-indigo-800 font-mono font-bold">
+                            <p className="text-[10px] text-stone-600 font-mono font-bold">
                               CR: GRIT-AI-9942
                             </p>
                           </div>
@@ -395,7 +395,7 @@ export const CohortTracker: React.FC = () => {
       <div className="bg-white border border-[#E8E1D5] rounded-3xl p-6 shadow-sm space-y-4">
         <div className="flex items-center justify-between border-b border-[#E8E1D5] pb-4">
           <div className="flex items-center gap-2">
-            <FileText className="w-4 h-4 text-indigo-700" />
+            <FileText className="w-4 h-4 text-orange-700" />
             <h3 className="font-black text-stone-900 text-sm">System & Integrity Audit Trail</h3>
           </div>
           <span className="text-xs text-stone-500 font-mono font-medium">Immutable Log Buffer</span>
@@ -417,7 +417,7 @@ export const CohortTracker: React.FC = () => {
                 <div className="flex items-center gap-2 font-mono text-[10px]">
                   <span className="font-black uppercase tracking-wider text-stone-500">{log.action}</span>
                   <span>•</span>
-                  <span className="text-indigo-800 font-bold">Actor: {log.actor}</span>
+                  <span className="text-orange-800 font-bold">Actor: {log.actor}</span>
                 </div>
                 <p className="leading-relaxed font-medium">{log.details}</p>
               </div>

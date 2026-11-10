@@ -70,7 +70,7 @@ export const AvailabilityManager: React.FC = () => {
           className={`px-4 py-2.5 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-sm ${
             isSaved
               ? 'bg-emerald-700 text-white'
-              : 'bg-indigo-700 hover:bg-indigo-600 text-white shadow-indigo-700/20'
+              : 'bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white shadow-orange-600/20'
           }`}
         >
           {isSaved ? (
@@ -138,7 +138,7 @@ export const AvailabilityManager: React.FC = () => {
 
             <div className="flex items-center justify-between text-xs pt-2">
               <span className="text-stone-700 font-bold">Buffer Between Sessions</span>
-              <span className="font-black text-indigo-700">{bufferMinutes} mins</span>
+              <span className="font-black text-orange-700">{bufferMinutes} mins</span>
             </div>
             <input
               type="range"
@@ -147,7 +147,7 @@ export const AvailabilityManager: React.FC = () => {
               step="5"
               value={bufferMinutes}
               onChange={(e) => setBufferMinutes(parseInt(e.target.value))}
-              className="w-full accent-indigo-600 cursor-pointer"
+              className="w-full accent-orange-600 cursor-pointer"
             />
           </div>
         </div>
@@ -155,7 +155,7 @@ export const AvailabilityManager: React.FC = () => {
         {/* Right Col: Daily Time Slots */}
         <div className="bg-[#FAF7F2] border border-[#E8E1D5] rounded-2xl p-5 space-y-4">
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-indigo-700" />
+            <Clock className="w-4 h-4 text-orange-700" />
             <h3 className="text-xs font-black uppercase tracking-wider text-stone-800">
               2. Daily Time Windows
             </h3>
@@ -171,7 +171,7 @@ export const AvailabilityManager: React.FC = () => {
               placeholder="e.g. 03:30 PM"
               value={newTimeInput}
               onChange={(e) => setNewTimeInput(e.target.value)}
-              className="flex-1 bg-white border border-[#E8E1D5] rounded-xl px-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-indigo-600 shadow-sm"
+              className="flex-1 bg-white border border-[#E8E1D5] rounded-xl px-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-orange-500 shadow-sm"
             />
             <button
               onClick={addSlot}

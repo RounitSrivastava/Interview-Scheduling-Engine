@@ -135,7 +135,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                       onClick={() => setSelectedSlotId(slot.id)}
                       className={`p-3.5 rounded-2xl border text-left transition-all relative ${
                         isSelected
-                          ? 'bg-indigo-50 border-2 border-indigo-600 text-stone-900 shadow-md ring-1 ring-indigo-600'
+                          ? 'bg-orange-50 border-2 border-orange-600 text-stone-900 shadow-md ring-1 ring-orange-500'
                           : isAvailable
                           ? 'bg-white border-[#E8E1D5] hover:border-stone-400 text-stone-900 cursor-pointer shadow-sm'
                           : 'bg-stone-100 border-stone-200 opacity-40 cursor-not-allowed'
@@ -147,7 +147,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                           <span>{slot.startTime} – {slot.endTime}</span>
                         </div>
                         {isSelected && (
-                          <div className="w-4 h-4 rounded-full bg-indigo-600 text-white flex items-center justify-center">
+                          <div className="w-4 h-4 rounded-full bg-orange-600 text-white flex items-center justify-center">
                             <Check className="w-2.5 h-2.5 stroke-[3]" />
                           </div>
                         )}
@@ -159,7 +159,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) =
                       </div>
 
                       <div className="flex items-center gap-2 pt-1 border-t border-stone-200">
-                        <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-800 text-[10px] flex items-center justify-center font-black">
+                        <div className="w-6 h-6 rounded-full bg-orange-100 text-orange-800 text-[10px] flex items-center justify-center font-black">
                           {slot.interviewerName.charAt(0)}
                         </div>
                         <div>

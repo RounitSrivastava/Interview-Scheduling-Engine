@@ -137,7 +137,7 @@ export const BeforeAfterComparison: React.FC<BeforeAfterToggleProps> = ({ viewMo
             <div className="flex items-center justify-between text-[11px] pt-1 border-t border-emerald-100">
               <span className="text-stone-600">Digital Certificate: <strong>Ready</strong></span>
               <div className="flex gap-2">
-                <button className="text-xs font-bold text-indigo-700 hover:text-indigo-800 flex items-center gap-1">
+                <button className="text-xs font-bold text-orange-700 hover:text-orange-800 flex items-center gap-1">
                   <Share2 className="w-3 h-3" />
                   <span>Share</span>
                 </button>
