@@ -126,13 +126,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenWriteup }) => {
               </div>
             )}
 
-            {/* 2-Page Write-up Modal Button */}
+            {/* Write-up Modal Button */}
             <button
               onClick={onOpenWriteup}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-[#F4EFE6] text-stone-700 hover:text-orange-700 border border-[#D8CEBF] text-xs font-heading font-bold shadow-sm transition"
             >
               <FileText className="w-3.5 h-3.5 text-orange-600" />
-              <span>2-Page Write-Up</span>
+              <span>Write up of (2 pages max)</span>
             </button>
 
             {/* Reset data */}

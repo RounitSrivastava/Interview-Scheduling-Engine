@@ -33,14 +33,14 @@ export const WriteupModal: React.FC<WriteupModalProps> = ({ isOpen, onClose }) =
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="font-black text-stone-900 text-base sm:text-lg">
-                  NIAT GRIT — Interview Scheduling Engine Architecture
+                  GRIT: Track Badge Interview Engine Architecture
                 </h2>
                 <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">
                   Round 1 Submission
                 </span>
               </div>
               <p className="text-xs text-stone-500 font-medium">
-                Author: AI Product Engineer Candidate • 2-Page Technical & Product Specification
+                Author: Rounit Srivastava (KIIT) • Write up of (2 pages max)
               </p>
             </div>
           </div>
@@ -68,13 +68,13 @@ export const WriteupModal: React.FC<WriteupModalProps> = ({ isOpen, onClose }) =
           {/* Document Title Banner */}
           <div className="border-b border-[#E8E1D5] pb-6">
             <span className="text-xs font-mono font-bold text-orange-700 uppercase tracking-widest block mb-1">
-              PAGE 1 OF 2 • CORE ARCHITECTURE & LIFECYCLE
+              PAGE 1 OF 2: CORE ARCHITECTURE & LIFECYCLE
             </span>
             <h1 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">
-              Design Specification: GRIT Track Badge Interview Engine
+              Write up of (2 pages max): GRIT Track Badge Interview Engine
             </h1>
             <p className="text-xs text-stone-500 mt-2 font-medium">
-              National Institute of Applied Technology (NIAT) • Scalable, High-Integrity Slot Allocation System
+              KIIT University Cohort • Scalable, High Integrity Slot Allocation System
             </p>
           </div>
 
@@ -238,7 +238,7 @@ export const WriteupModal: React.FC<WriteupModalProps> = ({ isOpen, onClose }) =
           {/* PAGE 2 BREAK */}
           <div className="border-t border-[#E8E1D5] pt-6">
             <span className="text-xs font-mono font-bold text-indigo-800 uppercase tracking-widest block mb-1">
-              PAGE 2 OF 2 • DATA MODEL & CONCURRENCY SAFEGUARDS
+              PAGE 2 OF 2: DATA MODEL & CONCURRENCY SAFEGUARDS
             </span>
           </div>
 

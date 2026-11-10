@@ -65,7 +65,7 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v5_rounit_kiit';
+const STORAGE_KEY = 'grit_interview_system_v6_rounit_kiit';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
@@ -74,6 +74,9 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     try {
       localStorage.removeItem('grit_interview_system_v1_students');
       localStorage.removeItem('grit_interview_system_v2_students');
+      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_students');
+      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_bookings');
+      localStorage.removeItem('grit_interview_system_v5_rounit_kiit_interviewers');
     } catch (_) {}
 
     const saved = localStorage.getItem(`${STORAGE_KEY}_students`);

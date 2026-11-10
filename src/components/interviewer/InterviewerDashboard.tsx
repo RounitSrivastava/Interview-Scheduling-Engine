@@ -129,10 +129,18 @@ export const InterviewerDashboard: React.FC = () => {
                   className="bg-white border border-[#E8E1D5] hover:border-[#D8CEBF] rounded-2xl p-6 shadow-sm transition flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-800 border border-orange-200 flex flex-col items-center justify-center font-black text-xs shadow-sm">
-                      <Clock className="w-4 h-4 mb-0.5" />
-                      <span>{b.startTime.split(' ')[0]}</span>
-                    </div>
+                    {b.studentId === 'stu-101' || b.studentName === 'Rounit Srivastava' ? (
+                      <img
+                        src="/rounit-photo.png"
+                        alt="Rounit Srivastava"
+                        className="w-14 h-14 rounded-2xl object-cover ring-2 ring-orange-200 border border-[#E8E1D5] shadow-sm flex-shrink-0"
+                      />
+                    ) : (
+                      <div className="w-14 h-14 rounded-2xl bg-orange-100 text-orange-800 border border-orange-200 flex flex-col items-center justify-center font-black text-xs shadow-sm flex-shrink-0">
+                        <Clock className="w-4 h-4 mb-0.5" />
+                        <span>{b.startTime.split(' ')[0]}</span>
+                      </div>
+                    )}
 
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
@@ -145,7 +153,7 @@ export const InterviewerDashboard: React.FC = () => {
                         </span>
                       </div>
                       <p className="text-xs text-stone-500 font-medium">
-                        {b.studentCollege} • Booked for <strong className="text-stone-800">{b.date}</strong> at <strong className="text-stone-800">{b.startTime} – {b.endTime}</strong>
+                        {b.studentCollege} • Booked for <strong className="text-stone-800">{b.date}</strong> at <strong className="text-stone-800">{b.startTime} to {b.endTime}</strong>
                       </p>
                       <div className="flex items-center gap-3 pt-1 text-xs text-emerald-700 font-bold">
                         <span>✓ 4/4 Skill Contests Cleared</span>
@@ -172,7 +180,7 @@ export const InterviewerDashboard: React.FC = () => {
                       className="flex-1 lg:flex-none px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-700 to-purple-700 hover:from-indigo-800 hover:to-purple-800 text-white text-xs font-black shadow-md shadow-indigo-700/20 flex items-center justify-center gap-2 transition"
                     >
                       <Award className="w-4 h-4" />
-                      <span>Record Outcome (Pass/Fail/Retake)</span>
+                      <span>Record Outcome (Pass, Fail, Retake)</span>
                     </button>
                   </div>
                 </div>

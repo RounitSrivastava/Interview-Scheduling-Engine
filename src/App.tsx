@@ -40,7 +40,7 @@ const MainLayout: React.FC = () => {
               onClick={() => setIsWriteupOpen(true)}
               className="text-orange-700 hover:text-orange-900 font-semibold underline underline-offset-4 transition"
             >
-              Read 2-Page Product Architecture Doc
+              Read Write up of (2 pages max)
             </button>
             <span className="text-stone-300">•</span>
             <span className="text-stone-500">AI Product Engineer Candidate Prototype</span>
