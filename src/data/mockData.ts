@@ -105,9 +105,9 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'stu-103',
-    name: 'Vikram Malhotra',
+    name: 'Sanchari',
     rollNumber: '23050914',
-    email: 'vikram.23050914@kiit.ac.in',
+    email: 'sanchari.23050914@kiit.ac.in',
     avatar: '/rounit-photo.png',
     college: 'KIIT University, Bhubaneswar',
     currentMiles: 3100,
@@ -120,7 +120,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'stu-104',
-    name: 'Rohan Mehta',
+    name: 'Rohan Lenka',
     rollNumber: '23050755',
     email: 'rohan.23050755@kiit.ac.in',
     avatar: '/rounit-photo.png',
@@ -134,7 +134,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'stu-105',
-    name: 'Tanya Reddy',
+    name: 'Tanya',
     rollNumber: '23051342',
     email: 'tanya.23051342@kiit.ac.in',
     avatar: '/rounit-photo.png',
@@ -149,7 +149,7 @@ export const INITIAL_STUDENTS: Student[] = [
   },
   {
     id: 'stu-106',
-    name: 'Devansh Joshi',
+    name: 'Devansh',
     rollNumber: '23051501',
     email: 'devansh.23051501@kiit.ac.in',
     avatar: '/rounit-photo.png',
@@ -189,7 +189,7 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
   {
     id: 'book-201',
     studentId: 'stu-102',
-    studentName: 'Sneha Patel',
+    studentName: 'Sneha',
     studentEmail: 'sneha.23051180@kiit.ac.in',
     studentRollNumber: '23051180',
     studentCollege: 'KIIT University, Bhubaneswar',
@@ -210,8 +210,8 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
   {
     id: 'book-202',
     studentId: 'stu-103',
-    studentName: 'Vikram Malhotra',
-    studentEmail: 'vikram.23050914@kiit.ac.in',
+    studentName: 'Sanchari',
+    studentEmail: 'sanchari.23050914@kiit.ac.in',
     studentRollNumber: '23050914',
     studentCollege: 'KIIT University, Bhubaneswar',
     trackId: 'track-genai',
@@ -244,7 +244,7 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
   {
     id: 'book-203',
     studentId: 'stu-105',
-    studentName: 'Tanya Reddy',
+    studentName: 'Tanya',
     studentEmail: 'tanya.23051342@kiit.ac.in',
     studentRollNumber: '23051342',
     studentCollege: 'KIIT University, Bhubaneswar',
@@ -278,7 +278,7 @@ export const INITIAL_BOOKINGS: InterviewBooking[] = [
   {
     id: 'book-204',
     studentId: 'stu-106',
-    studentName: 'Devansh Joshi',
+    studentName: 'Devansh',
     studentEmail: 'devansh.23051501@kiit.ac.in',
     studentRollNumber: '23051501',
     studentCollege: 'KIIT University, Bhubaneswar',
