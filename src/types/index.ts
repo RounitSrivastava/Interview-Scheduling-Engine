@@ -121,3 +121,4 @@ export interface AuditLog {
   details: string;
   badgeRevoked?: boolean;
 }
+

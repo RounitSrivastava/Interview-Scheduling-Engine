@@ -8,12 +8,8 @@ import {
   ShieldAlert, 
   CheckCircle2, 
   Search, 
-  Filter, 
   Clock, 
-  Award, 
   RotateCcw,
-  Sparkles,
-  TrendingUp,
   FileText
 } from 'lucide-react';
 import { Student } from '../../types';
@@ -74,15 +70,15 @@ export const CohortTracker: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-emerald-100 text-emerald-800 border border-emerald-200">
               Operations Control
             </span>
-            <span className="text-xs text-slate-400">• Assignment Requirement</span>
+            <span className="text-xs text-stone-500">• Assignment Requirement</span>
           </div>
-          <h1 className="text-xl sm:text-2xl font-black text-white mt-1">
+          <h1 className="text-xl sm:text-2xl font-black text-stone-900 mt-1">
             Cohort Interview Funnel & Integrity Management
           </h1>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-stone-500">
             Monitor eligible students who have booked vs unbooked, dispatch automated nudges, and manage post-award malpractice audits.
           </p>
         </div>
@@ -92,71 +88,71 @@ export const CohortTracker: React.FC = () => {
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
         
         {/* Total Eligible */}
-        <div className="bg-[#0F172A] border border-slate-800 rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+        <div className="bg-white border border-[#E8E1D5] rounded-3xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">
             <span>Total Eligible</span>
-            <Users className="w-4 h-4 text-indigo-400" />
+            <Users className="w-4 h-4 text-indigo-700" />
           </div>
-          <div className="text-2xl font-black text-white">{totalEligible}</div>
-          <p className="text-[11px] text-slate-400 mt-1">100% skills cleared</p>
+          <div className="text-2xl font-black text-stone-900">{totalEligible}</div>
+          <p className="text-[11px] text-stone-500 mt-1 font-medium">100% skills cleared</p>
         </div>
 
         {/* Priority: Eligible NOT Booked */}
-        <div className="bg-[#0F172A] border border-amber-500/40 rounded-2xl p-5 shadow-lg relative overflow-hidden">
-          <div className="flex items-center justify-between text-xs text-amber-400 font-bold uppercase tracking-wider mb-1">
+        <div className="bg-amber-50/70 border-2 border-amber-300 rounded-3xl p-5 shadow-sm relative overflow-hidden">
+          <div className="flex items-center justify-between text-xs text-amber-800 font-black uppercase tracking-wider mb-1">
             <span>Eligible Unbooked</span>
-            <AlertCircle className="w-4 h-4 text-amber-400" />
+            <AlertCircle className="w-4 h-4 text-amber-700" />
           </div>
-          <div className="text-2xl font-black text-amber-300">{unbookedCount}</div>
-          <p className="text-[11px] text-amber-400/80 mt-1 font-semibold">Requires booking nudge</p>
+          <div className="text-2xl font-black text-amber-950">{unbookedCount}</div>
+          <p className="text-[11px] text-amber-800 mt-1 font-bold">Requires booking nudge</p>
         </div>
 
         {/* Scheduled */}
-        <div className="bg-[#0F172A] border border-slate-800 rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+        <div className="bg-white border border-[#E8E1D5] rounded-3xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">
             <span>Scheduled</span>
-            <CalendarCheck className="w-4 h-4 text-blue-400" />
+            <CalendarCheck className="w-4 h-4 text-blue-700" />
           </div>
-          <div className="text-2xl font-black text-white">{scheduledCount}</div>
-          <p className="text-[11px] text-slate-400 mt-1">Slots confirmed</p>
+          <div className="text-2xl font-black text-stone-900">{scheduledCount}</div>
+          <p className="text-[11px] text-stone-500 mt-1 font-medium">Slots confirmed</p>
         </div>
 
         {/* Evaluated / Completed */}
-        <div className="bg-[#0F172A] border border-slate-800 rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center justify-between text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">
+        <div className="bg-white border border-[#E8E1D5] rounded-3xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-xs text-stone-500 font-bold uppercase tracking-wider mb-1">
             <span>Evaluated</span>
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+            <CheckCircle2 className="w-4 h-4 text-emerald-700" />
           </div>
-          <div className="text-2xl font-black text-white">{completedCount}</div>
-          <p className="text-[11px] text-emerald-400 mt-1">Pass / Retake / Fail</p>
+          <div className="text-2xl font-black text-stone-900">{completedCount}</div>
+          <p className="text-[11px] text-emerald-700 mt-1 font-bold">Pass / Retake / Fail</p>
         </div>
 
         {/* Malpractice Nullified */}
-        <div className="bg-[#0F172A] border border-rose-500/40 rounded-2xl p-5 shadow-lg">
-          <div className="flex items-center justify-between text-xs text-rose-400 font-bold uppercase tracking-wider mb-1">
+        <div className="bg-rose-50/70 border-2 border-rose-300 rounded-3xl p-5 shadow-sm">
+          <div className="flex items-center justify-between text-xs text-rose-800 font-black uppercase tracking-wider mb-1">
             <span>Nullified Badges</span>
-            <ShieldAlert className="w-4 h-4 text-rose-400" />
+            <ShieldAlert className="w-4 h-4 text-rose-700" />
           </div>
-          <div className="text-2xl font-black text-rose-400">{flaggedCount}</div>
-          <p className="text-[11px] text-rose-400/80 mt-1 font-medium">Honor code revocations</p>
+          <div className="text-2xl font-black text-rose-900">{flaggedCount}</div>
+          <p className="text-[11px] text-rose-800 mt-1 font-bold">Honor code revocations</p>
         </div>
 
       </div>
 
       {/* Cohort Table & Filter Bar */}
-      <div className="bg-[#0F172A] border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+      <div className="bg-white border border-[#E8E1D5] rounded-3xl shadow-sm overflow-hidden">
         
         {/* Filter Controls & Search */}
-        <div className="p-5 border-b border-slate-800 bg-slate-900/60 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        <div className="p-5 border-b border-[#E8E1D5] bg-[#F4EFE6]/70 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
           
           {/* Tab Filter Pills */}
           <div className="flex items-center flex-wrap gap-1.5">
             <button
               onClick={() => setActiveFilter('UNBOOKED')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 shadow-sm ${
                 activeFilter === 'UNBOOKED'
-                  ? 'bg-amber-500 text-slate-950 shadow'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  ? 'bg-amber-500 text-stone-950'
+                  : 'bg-white border border-[#E8E1D5] text-stone-700 hover:border-stone-400'
               }`}
             >
               <AlertCircle className="w-3.5 h-3.5" />
@@ -165,10 +161,10 @@ export const CohortTracker: React.FC = () => {
 
             <button
               onClick={() => setActiveFilter('SCHEDULED')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 shadow-sm ${
                 activeFilter === 'SCHEDULED'
-                  ? 'bg-blue-600 text-white shadow'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  ? 'bg-blue-700 text-white'
+                  : 'bg-white border border-[#E8E1D5] text-stone-700 hover:border-stone-400'
               }`}
             >
               <CalendarCheck className="w-3.5 h-3.5" />
@@ -177,10 +173,10 @@ export const CohortTracker: React.FC = () => {
 
             <button
               onClick={() => setActiveFilter('COMPLETED')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 shadow-sm ${
                 activeFilter === 'COMPLETED'
-                  ? 'bg-emerald-600 text-white shadow'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  ? 'bg-emerald-700 text-white'
+                  : 'bg-white border border-[#E8E1D5] text-stone-700 hover:border-stone-400'
               }`}
             >
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -189,10 +185,10 @@ export const CohortTracker: React.FC = () => {
 
             <button
               onClick={() => setActiveFilter('FLAGGED')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 shadow-sm ${
                 activeFilter === 'FLAGGED'
-                  ? 'bg-rose-700 text-white shadow'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  ? 'bg-rose-700 text-white'
+                  : 'bg-white border border-[#E8E1D5] text-stone-700 hover:border-stone-400'
               }`}
             >
               <ShieldAlert className="w-3.5 h-3.5" />
@@ -201,10 +197,10 @@ export const CohortTracker: React.FC = () => {
 
             <button
               onClick={() => setActiveFilter('ALL')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-black transition shadow-sm ${
                 activeFilter === 'ALL'
-                  ? 'bg-slate-700 text-white'
-                  : 'bg-slate-800 text-slate-400 hover:text-slate-200'
+                  ? 'bg-stone-800 text-white'
+                  : 'bg-white border border-[#E8E1D5] text-stone-700 hover:border-stone-400'
               }`}
             >
               All ({students.length})
@@ -213,13 +209,13 @@ export const CohortTracker: React.FC = () => {
 
           {/* Search Input */}
           <div className="relative min-w-[240px]">
-            <Search className="w-4 h-4 text-slate-500 absolute left-3 top-2.5" />
+            <Search className="w-4 h-4 text-stone-400 absolute left-3 top-2.5" />
             <input
               type="text"
               placeholder="Search candidate name, roll no..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500"
+              className="w-full bg-white border border-[#E8E1D5] rounded-xl pl-9 pr-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-indigo-600 shadow-sm"
             />
           </div>
 
@@ -228,7 +224,7 @@ export const CohortTracker: React.FC = () => {
         {/* Table Content */}
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-900/80 text-slate-400 uppercase font-bold text-[10px] tracking-wider border-b border-slate-800">
+            <thead className="bg-[#FAF7F2] text-stone-500 uppercase font-black text-[10px] tracking-wider border-b border-[#E8E1D5]">
               <tr>
                 <th className="py-3 px-5">Candidate</th>
                 <th className="py-3 px-5">Track & Progress</th>
@@ -237,20 +233,19 @@ export const CohortTracker: React.FC = () => {
                 <th className="py-3 px-5 text-right">Ops Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800/60 text-slate-200">
+            <tbody className="divide-y divide-[#E8E1D5] text-stone-800">
               {filteredStudents.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="py-12 text-center text-slate-500">
+                  <td colSpan={5} className="py-12 text-center text-stone-400 font-medium">
                     No candidates found for the selected filter.
                   </td>
                 </tr>
               ) : (
                 filteredStudents.map((student) => {
                   const activeBooking = bookings.find((b) => b.studentId === student.id && b.status === 'SCHEDULED');
-                  const completedBooking = bookings.find((b) => b.studentId === student.id && b.status === 'COMPLETED');
 
                   return (
-                    <tr key={student.id} className="hover:bg-slate-900/40 transition">
+                    <tr key={student.id} className="hover:bg-[#FAF7F2] transition">
                       
                       {/* Candidate Profile */}
                       <td className="py-4 px-5">
@@ -258,14 +253,14 @@ export const CohortTracker: React.FC = () => {
                           <img
                             src={student.avatar}
                             alt={student.name}
-                            className="w-10 h-10 rounded-xl object-cover ring-1 ring-slate-700"
+                            className="w-10 h-10 rounded-2xl object-cover ring-1 ring-[#DDD0BC] shadow-sm"
                           />
                           <div>
-                            <div className="font-bold text-white text-sm">{student.name}</div>
-                            <div className="text-[11px] text-slate-400 font-mono">
+                            <div className="font-black text-stone-900 text-sm">{student.name}</div>
+                            <div className="text-[11px] text-stone-500 font-mono font-medium">
                               {student.rollNumber} • {student.college.split(',')[0]}
                             </div>
-                            <div className="text-[10px] text-amber-400 font-semibold mt-0.5">
+                            <div className="text-[10px] text-amber-700 font-black mt-0.5">
                               {student.currentMiles.toLocaleString()} Miles
                             </div>
                           </div>
@@ -275,8 +270,8 @@ export const CohortTracker: React.FC = () => {
                       {/* Track & Skills */}
                       <td className="py-4 px-5">
                         <div className="space-y-1">
-                          <span className="font-semibold text-slate-200 block">GenAI & Autonomous Agents</span>
-                          <span className="text-[11px] text-emerald-400 font-medium">
+                          <span className="font-bold text-stone-800 block">GenAI & Autonomous Agents</span>
+                          <span className="text-[11px] text-emerald-700 font-black">
                             ✓ {student.skillsCompleted}/{student.totalSkills} Contests Cleared
                           </span>
                         </div>
@@ -285,8 +280,8 @@ export const CohortTracker: React.FC = () => {
                       {/* Days Elapsed */}
                       <td className="py-4 px-5">
                         <div className="flex items-center gap-1.5">
-                          <Clock className="w-3.5 h-3.5 text-slate-500" />
-                          <span className="font-medium text-slate-300">
+                          <Clock className="w-3.5 h-3.5 text-stone-400" />
+                          <span className="font-bold text-stone-700">
                             {calculateDaysSinceEligible(student.eligibleSince)}
                           </span>
                         </div>
@@ -295,20 +290,20 @@ export const CohortTracker: React.FC = () => {
                       {/* Status Tag */}
                       <td className="py-4 px-5">
                         {student.interviewStatus === 'ELIGIBLE_UNBOOKED' && (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                            <AlertCircle className="w-3 h-3 text-amber-400" />
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300">
+                            <AlertCircle className="w-3 h-3 text-amber-700" />
                             <span>Eligible - Not Booked</span>
                           </span>
                         )}
 
                         {student.interviewStatus === 'SCHEDULED' && (
                           <div className="space-y-0.5">
-                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-500/15 text-blue-300 border border-blue-500/30">
-                              <CalendarCheck className="w-3 h-3 text-blue-400" />
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-blue-100 text-blue-900 border border-blue-300">
+                              <CalendarCheck className="w-3 h-3 text-blue-700" />
                               <span>Scheduled</span>
                             </span>
                             {activeBooking && (
-                              <p className="text-[10px] text-slate-400 font-mono">
+                              <p className="text-[10px] text-stone-500 font-mono font-medium">
                                 {activeBooking.date} • {activeBooking.startTime}
                               </p>
                             )}
@@ -317,32 +312,32 @@ export const CohortTracker: React.FC = () => {
 
                         {student.interviewStatus === 'PASSED' && (
                           <div className="space-y-0.5">
-                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
-                              <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-emerald-100 text-emerald-900 border border-emerald-300">
+                              <CheckCircle2 className="w-3 h-3 text-emerald-700" />
                               <span>Passed (Badge Issued)</span>
                             </span>
-                            <p className="text-[10px] text-indigo-300 font-mono">
+                            <p className="text-[10px] text-indigo-800 font-mono font-bold">
                               CR: GRIT-AI-9942
                             </p>
                           </div>
                         )}
 
                         {student.interviewStatus === 'RETAKE_REQUESTED' && (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-500/15 text-amber-300 border border-amber-500/30">
-                            <RotateCcw className="w-3 h-3 text-amber-400" />
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300">
+                            <RotateCcw className="w-3 h-3 text-amber-700" />
                             <span>Retake Later</span>
                           </span>
                         )}
 
                         {student.interviewStatus === 'FAILED' && (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-500/15 text-rose-300 border border-rose-500/30">
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-rose-100 text-rose-900 border border-rose-300">
                             <span>Failed (Cooling active)</span>
                           </span>
                         )}
 
                         {student.interviewStatus === 'MALPRACTICE_FLAGGED' && (
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-950 text-rose-300 border border-rose-700">
-                            <ShieldAlert className="w-3 h-3 text-rose-400" />
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-rose-200 text-rose-950 border border-rose-400">
+                            <ShieldAlert className="w-3 h-3 text-rose-700" />
                             <span>Badge Nullified (Cheating)</span>
                           </span>
                         )}
@@ -356,7 +351,7 @@ export const CohortTracker: React.FC = () => {
                           {student.interviewStatus === 'ELIGIBLE_UNBOOKED' && (
                             <button
                               onClick={() => sendNudge(student.id)}
-                              className="px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs flex items-center gap-1.5 transition shadow"
+                              className="px-3.5 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-stone-950 font-black text-xs flex items-center gap-1.5 transition shadow-sm"
                             >
                               <Send className="w-3 h-3" />
                               <span>Send Nudge</span>
@@ -367,7 +362,7 @@ export const CohortTracker: React.FC = () => {
                           {student.interviewStatus === 'PASSED' && (
                             <button
                               onClick={() => setFlaggingStudent(student)}
-                              className="px-3 py-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 font-semibold text-xs flex items-center gap-1.5 transition"
+                              className="px-3.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-300 font-bold text-xs flex items-center gap-1.5 transition shadow-sm"
                             >
                               <ShieldAlert className="w-3.5 h-3.5" />
                               <span>Audit / Nullify Badge</span>
@@ -375,11 +370,11 @@ export const CohortTracker: React.FC = () => {
                           )}
 
                           {student.interviewStatus === 'SCHEDULED' && (
-                            <span className="text-slate-500 text-[11px] font-medium">Awaiting Call</span>
+                            <span className="text-stone-400 text-[11px] font-semibold">Awaiting Call</span>
                           )}
 
                           {student.interviewStatus === 'MALPRACTICE_FLAGGED' && (
-                            <span className="text-rose-400 text-[11px] font-medium">Revocation Logged</span>
+                            <span className="text-rose-700 text-[11px] font-bold">Revocation Logged</span>
                           )}
                         </div>
                       </td>
@@ -395,36 +390,36 @@ export const CohortTracker: React.FC = () => {
       </div>
 
       {/* Real-time System Audit Trail */}
-      <div className="bg-[#0F172A] border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+      <div className="bg-white border border-[#E8E1D5] rounded-3xl p-6 shadow-sm space-y-4">
+        <div className="flex items-center justify-between border-b border-[#E8E1D5] pb-4">
           <div className="flex items-center gap-2">
-            <FileText className="w-4 h-4 text-indigo-400" />
-            <h3 className="font-bold text-white text-sm">System & Integrity Audit Trail</h3>
+            <FileText className="w-4 h-4 text-indigo-700" />
+            <h3 className="font-black text-stone-900 text-sm">System & Integrity Audit Trail</h3>
           </div>
-          <span className="text-xs text-slate-400 font-mono">Immutable Log Buffer</span>
+          <span className="text-xs text-stone-500 font-mono font-medium">Immutable Log Buffer</span>
         </div>
 
         <div className="space-y-2.5 max-h-56 overflow-y-auto pr-1">
           {auditLogs.map((log) => (
             <div
               key={log.id}
-              className={`p-3 rounded-xl border text-xs flex items-start justify-between gap-4 ${
+              className={`p-3.5 rounded-xl border text-xs flex items-start justify-between gap-4 ${
                 log.action.includes('MALPRACTICE')
-                  ? 'bg-rose-950/20 border-rose-500/30 text-rose-200'
+                  ? 'bg-rose-50 border-rose-300 text-rose-950 font-medium'
                   : log.action.includes('NUDGE')
-                  ? 'bg-amber-950/20 border-amber-500/30 text-amber-200'
-                  : 'bg-slate-900/60 border-slate-800/80 text-slate-300'
+                  ? 'bg-amber-50 border-amber-300 text-amber-950 font-medium'
+                  : 'bg-[#FAF7F2] border-[#E8E1D5] text-stone-700'
               }`}
             >
               <div className="space-y-0.5">
                 <div className="flex items-center gap-2 font-mono text-[10px]">
-                  <span className="font-bold uppercase tracking-wider text-slate-400">{log.action}</span>
+                  <span className="font-black uppercase tracking-wider text-stone-500">{log.action}</span>
                   <span>•</span>
-                  <span className="text-indigo-400">Actor: {log.actor}</span>
+                  <span className="text-indigo-800 font-bold">Actor: {log.actor}</span>
                 </div>
-                <p className="leading-relaxed">{log.details}</p>
+                <p className="leading-relaxed font-medium">{log.details}</p>
               </div>
-              <span className="text-[10px] text-slate-400 whitespace-nowrap font-mono">
+              <span className="text-[10px] text-stone-400 whitespace-nowrap font-mono font-bold">
                 {new Date(log.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </span>
             </div>
@@ -434,16 +429,16 @@ export const CohortTracker: React.FC = () => {
 
       {/* Malpractice Flagging & Revocation Modal */}
       {flaggingStudent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-[#0F172A] border border-rose-500/50 rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl">
-            <div className="p-5 border-b border-slate-800 bg-rose-950/30 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-[#FAF7F2] border-2 border-rose-300 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl">
+            <div className="p-5 border-b border-[#E8E1D5] bg-rose-50 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/30 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-2xl bg-rose-100 text-rose-800 border border-rose-200 flex items-center justify-center">
                   <ShieldAlert className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">Nullify Badge: Integrity Review</h3>
-                  <p className="text-xs text-rose-300">
+                  <h3 className="font-black text-stone-900 text-base">Nullify Badge: Integrity Review</h3>
+                  <p className="text-xs text-rose-800 font-medium">
                     Candidate: <strong>{flaggingStudent.name}</strong> ({flaggingStudent.rollNumber})
                   </p>
                 </div>
@@ -451,19 +446,19 @@ export const CohortTracker: React.FC = () => {
             </div>
 
             <form onSubmit={handleFlagSubmit} className="p-6 space-y-4">
-              <div className="p-3.5 rounded-xl bg-rose-950/40 border border-rose-900 text-xs text-rose-200 leading-relaxed">
+              <div className="p-4 rounded-2xl bg-rose-100 border border-rose-300 text-xs text-rose-950 leading-relaxed font-medium">
                 <strong>Attention:</strong> Submitting this action will immediately revoke the candidate's verified Track Badge, claw back the +500 GRIT Miles reward, and post an immutable violation record under NIAT Honor Code Section 4.2.
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-black text-stone-700 uppercase tracking-wider mb-1.5">
                   Malpractice Evidence & Violation Reason
                 </label>
                 <textarea
                   rows={4}
                   value={malpracticeReason}
                   onChange={(e) => setMalpracticeReason(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-slate-200 focus:outline-none focus:border-rose-500 font-sans"
+                  className="w-full bg-white border border-[#E8E1D5] rounded-2xl p-3 text-xs text-stone-800 font-medium focus:outline-none focus:border-rose-500 shadow-sm"
                   placeholder="Detail the code similarity findings, IP anomalies, or telemetry violations..."
                   required
                 />
@@ -473,13 +468,13 @@ export const CohortTracker: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setFlaggingStudent(null)}
-                  className="px-4 py-2 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200"
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-stone-600 hover:text-stone-900"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2 rounded-lg text-xs font-bold bg-rose-600 hover:bg-rose-500 text-white shadow-lg shadow-rose-600/30 flex items-center gap-2"
+                  className="px-5 py-2.5 rounded-xl text-xs font-black bg-rose-700 hover:bg-rose-800 text-white shadow-md shadow-rose-700/20 flex items-center gap-2"
                 >
                   <ShieldAlert className="w-4 h-4" />
                   <span>Confirm Revocation & Nullify</span>

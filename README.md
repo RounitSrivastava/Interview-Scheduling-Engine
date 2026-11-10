@@ -84,3 +84,4 @@ To guarantee that two students never claim the same slot during high-traffic wav
 
 ## 🧑‍💻 Code Style Note
 Written with idiomatic React 18, TypeScript, Tailwind CSS, clean modular architecture, and domain-grounded business logic. No generic AI templates or robotic boilerplate comments.
+

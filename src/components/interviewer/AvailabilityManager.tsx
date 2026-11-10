@@ -6,10 +6,7 @@ import {
   Plus, 
   Trash2, 
   Save, 
-  Check, 
-  Sliders, 
-  ShieldCheck,
-  UserCheck
+  Check
 } from 'lucide-react';
 
 export const AvailabilityManager: React.FC = () => {
@@ -49,31 +46,31 @@ export const AvailabilityManager: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#0F172A] border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
+    <div className="bg-white border border-[#E8E1D5] rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
       
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-5">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#E8E1D5] pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase bg-orange-100 text-orange-800 border border-orange-200">
               Interviewer Control
             </span>
-            <span className="text-xs text-slate-400">• Assignment Requirement</span>
+            <span className="text-xs text-stone-500">• Assignment Requirement</span>
           </div>
-          <h2 className="text-lg font-bold text-white mt-1">
+          <h2 className="text-lg font-black text-stone-900 mt-1">
             Manage Availability & Weekly Schedule
           </h2>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-stone-500">
             Define your active evaluation windows, recurring time blocks, and anti-burnout slot throttles.
           </p>
         </div>
 
         <button
           onClick={handleSave}
-          className={`px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 shadow-lg ${
+          className={`px-4 py-2.5 rounded-xl text-xs font-black transition flex items-center gap-2 shadow-sm ${
             isSaved
-              ? 'bg-emerald-600 text-white'
-              : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-600/20'
+              ? 'bg-emerald-700 text-white'
+              : 'bg-indigo-700 hover:bg-indigo-600 text-white shadow-indigo-700/20'
           }`}
         >
           {isSaved ? (
@@ -93,14 +90,14 @@ export const AvailabilityManager: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         {/* Left Col: Days of the Week */}
-        <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-4">
+        <div className="bg-[#FAF7F2] border border-[#E8E1D5] rounded-2xl p-5 space-y-4">
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-orange-400" />
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">
+            <Calendar className="w-4 h-4 text-orange-600" />
+            <h3 className="text-xs font-black uppercase tracking-wider text-stone-800">
               1. Available Evaluation Days
             </h3>
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-stone-500">
             Select the weekdays candidates are allowed to book slots with you.
           </p>
 
@@ -112,10 +109,10 @@ export const AvailabilityManager: React.FC = () => {
                   key={day}
                   type="button"
                   onClick={() => toggleDay(day)}
-                  className={`py-3 px-2 rounded-xl text-xs font-bold border transition ${
+                  className={`py-3 px-2 rounded-xl text-xs font-black border transition ${
                     isSelected
-                      ? 'bg-orange-500/15 border-orange-500 text-white shadow-md shadow-orange-500/10'
-                      : 'bg-slate-950/60 border-slate-800 text-slate-500 hover:text-slate-300'
+                      ? 'bg-orange-50 border-2 border-orange-600 text-orange-950 shadow-sm'
+                      : 'bg-white border-[#E8E1D5] text-stone-600 hover:border-stone-400'
                   }`}
                 >
                   {day}
@@ -125,10 +122,10 @@ export const AvailabilityManager: React.FC = () => {
           </div>
 
           {/* Slot Throttling Controls */}
-          <div className="pt-4 border-t border-slate-800/80 space-y-3">
+          <div className="pt-4 border-t border-[#E8E1D5] space-y-3">
             <div className="flex items-center justify-between text-xs">
-              <span className="text-slate-300 font-medium">Daily Interview Cap</span>
-              <span className="font-bold text-amber-400">{maxDaily} slots/day</span>
+              <span className="text-stone-700 font-bold">Daily Interview Cap</span>
+              <span className="font-black text-amber-700">{maxDaily} slots/day</span>
             </div>
             <input
               type="range"
@@ -136,12 +133,12 @@ export const AvailabilityManager: React.FC = () => {
               max="8"
               value={maxDaily}
               onChange={(e) => setMaxDaily(parseInt(e.target.value))}
-              className="w-full accent-amber-500 cursor-pointer"
+              className="w-full accent-amber-600 cursor-pointer"
             />
 
             <div className="flex items-center justify-between text-xs pt-2">
-              <span className="text-slate-300 font-medium">Buffer Between Sessions</span>
-              <span className="font-bold text-indigo-400">{bufferMinutes} mins</span>
+              <span className="text-stone-700 font-bold">Buffer Between Sessions</span>
+              <span className="font-black text-indigo-700">{bufferMinutes} mins</span>
             </div>
             <input
               type="range"
@@ -150,20 +147,20 @@ export const AvailabilityManager: React.FC = () => {
               step="5"
               value={bufferMinutes}
               onChange={(e) => setBufferMinutes(parseInt(e.target.value))}
-              className="w-full accent-indigo-500 cursor-pointer"
+              className="w-full accent-indigo-600 cursor-pointer"
             />
           </div>
         </div>
 
         {/* Right Col: Daily Time Slots */}
-        <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-4">
+        <div className="bg-[#FAF7F2] border border-[#E8E1D5] rounded-2xl p-5 space-y-4">
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-indigo-400" />
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-200">
+            <Clock className="w-4 h-4 text-indigo-700" />
+            <h3 className="text-xs font-black uppercase tracking-wider text-stone-800">
               2. Daily Time Windows
             </h3>
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-stone-500">
             Define standard slot start times (30 mins per evaluation).
           </p>
 
@@ -174,11 +171,11 @@ export const AvailabilityManager: React.FC = () => {
               placeholder="e.g. 03:30 PM"
               value={newTimeInput}
               onChange={(e) => setNewTimeInput(e.target.value)}
-              className="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-indigo-500"
+              className="flex-1 bg-white border border-[#E8E1D5] rounded-xl px-3 py-2 text-xs text-stone-800 font-medium focus:outline-none focus:border-indigo-600 shadow-sm"
             />
             <button
               onClick={addSlot}
-              className="px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold flex items-center gap-1 transition"
+              className="px-3.5 py-2 rounded-xl bg-stone-800 hover:bg-stone-900 text-white text-xs font-bold flex items-center gap-1 transition shadow-sm"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Add</span>
@@ -190,16 +187,16 @@ export const AvailabilityManager: React.FC = () => {
             {timeSlots.map((time) => (
               <div
                 key={time}
-                className="p-2.5 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center justify-between text-xs"
+                className="p-3 rounded-xl bg-white border border-[#E8E1D5] flex items-center justify-between text-xs shadow-sm"
               >
-                <div className="flex items-center gap-2 text-slate-200 font-mono font-medium">
-                  <Clock className="w-3.5 h-3.5 text-amber-400" />
+                <div className="flex items-center gap-2 text-stone-800 font-mono font-bold">
+                  <Clock className="w-3.5 h-3.5 text-amber-600" />
                   <span>{time}</span>
-                  <span className="text-[10px] text-slate-500 font-sans">(30m window)</span>
+                  <span className="text-[10px] text-stone-500 font-sans font-medium">(30m window)</span>
                 </div>
                 <button
                   onClick={() => removeSlot(time)}
-                  className="p-1 rounded text-slate-500 hover:text-rose-400 hover:bg-rose-500/10 transition"
+                  className="p-1 rounded text-stone-400 hover:text-rose-600 hover:bg-rose-50 transition"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                 </button>

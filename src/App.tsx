@@ -12,7 +12,7 @@ const MainLayout: React.FC = () => {
   const [isWriteupOpen, setIsWriteupOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#090D16] text-slate-100">
+    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-stone-800 selection:bg-orange-600 selection:text-white">
       {/* Top Navbar */}
       <Navbar onOpenWriteup={() => setIsWriteupOpen(true)} />
 
@@ -24,13 +24,13 @@ const MainLayout: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/80 bg-[#0B0F19] py-8 text-xs text-slate-500">
+      <footer className="border-t border-[#E8E1D5] bg-[#F4EFE6]/80 py-8 text-xs text-stone-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-6 h-6 rounded-lg bg-orange-500 flex items-center justify-center font-black text-white text-xs">
+            <div className="w-6 h-6 rounded-lg bg-orange-600 flex items-center justify-center font-black text-white text-xs shadow-sm">
               G
             </div>
-            <span>
+            <span className="font-medium text-stone-600">
               GRIT (Global Readiness Immersion Trips) • National Institute of Applied Technology (NIAT)
             </span>
           </div>
@@ -38,12 +38,12 @@ const MainLayout: React.FC = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setIsWriteupOpen(true)}
-              className="text-indigo-400 hover:text-indigo-300 font-semibold underline underline-offset-4 transition"
+              className="text-orange-700 hover:text-orange-900 font-semibold underline underline-offset-4 transition"
             >
               Read 2-Page Product Architecture Doc
             </button>
-            <span>•</span>
-            <span className="text-slate-400">AI Product Engineer Candidate Prototype</span>
+            <span className="text-stone-300">•</span>
+            <span className="text-stone-500">AI Product Engineer Candidate Prototype</span>
           </div>
         </div>
       </footer>

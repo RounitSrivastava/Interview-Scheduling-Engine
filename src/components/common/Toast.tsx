@@ -10,22 +10,22 @@ export const ToastContainer: React.FC = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-md w-full pointer-events-none">
       {toasts.map((toast) => {
-        let borderClass = 'border-blue-500/30 bg-[#0F172A]/95 text-blue-200';
+        let borderClass = 'border-blue-300 bg-white text-stone-800 shadow-blue-900/5';
         let Icon = Info;
-        let iconColor = 'text-blue-400';
+        let iconColor = 'text-blue-600';
 
         if (toast.type === 'success') {
-          borderClass = 'border-emerald-500/40 bg-[#062016]/95 text-emerald-100 shadow-emerald-950/50';
+          borderClass = 'border-emerald-300 bg-white text-stone-800 shadow-emerald-900/5';
           Icon = CheckCircle2;
-          iconColor = 'text-emerald-400';
+          iconColor = 'text-emerald-600';
         } else if (toast.type === 'warning') {
-          borderClass = 'border-amber-500/40 bg-[#241705]/95 text-amber-100 shadow-amber-950/50';
+          borderClass = 'border-amber-300 bg-white text-stone-800 shadow-amber-900/5';
           Icon = AlertTriangle;
-          iconColor = 'text-amber-400';
+          iconColor = 'text-amber-600';
         } else if (toast.type === 'error') {
-          borderClass = 'border-rose-500/40 bg-[#25080E]/95 text-rose-100 shadow-rose-950/50';
+          borderClass = 'border-rose-300 bg-white text-stone-800 shadow-rose-900/5';
           Icon = AlertCircle;
-          iconColor = 'text-rose-400';
+          iconColor = 'text-rose-600';
         }
 
         return (
@@ -35,12 +35,12 @@ export const ToastContainer: React.FC = () => {
           >
             <Icon className={`w-5 h-5 flex-shrink-0 mt-0.5 ${iconColor}`} />
             <div className="flex-1 text-xs">
-              <h4 className="font-bold text-sm tracking-tight mb-0.5">{toast.title}</h4>
-              <p className="opacity-90 leading-relaxed">{toast.message}</p>
+              <h4 className="font-bold text-sm text-stone-900 tracking-tight mb-0.5">{toast.title}</h4>
+              <p className="text-stone-600 leading-relaxed">{toast.message}</p>
             </div>
             <button
               onClick={() => dismissToast(toast.id)}
-              className="p-1 rounded-md hover:bg-white/10 text-slate-400 hover:text-white transition"
+              className="p-1 rounded-md hover:bg-stone-100 text-stone-400 hover:text-stone-700 transition"
             >
               <X className="w-3.5 h-3.5" />
             </button>

@@ -203,3 +203,4 @@ To make race conditions impossible under concurrent high load, we implement a **
 - **Student Dashboard:** Track progress (4/4 skills cleared), interactive state switcher, slot booking drawer, meeting launcher, and side-by-side **Before vs. After result comparison**.
 - **Interviewer Portal:** Daily schedule queue, candidate repository inspection, availability manager (weekly days, slots, buffer sliders), and 4-metric outcome evaluation modal.
 - **Ops & Integrity Console:** Real-time cohort funnel tracking "Eligible - Unbooked" vs "Booked", one-click WhatsApp/email nudges, and post-award malpractice audit modal with automatic badge revocation.
+
