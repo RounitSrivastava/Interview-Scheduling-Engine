@@ -43,7 +43,7 @@ export const StudentDashboard: React.FC = () => {
   const track = INITIAL_TRACK_BADGES.find((t) => t.id === currentStudent.trackId) || INITIAL_TRACK_BADGES[0];
 
   const studentName = currentStudent.id === 'stu-101' ? 'Rounit Srivastava' : currentStudent.name;
-  const studentRoll = currentStudent.id === 'stu-101' ? '21051042' : currentStudent.rollNumber;
+  const studentRoll = currentStudent.id === 'stu-101' ? '23051042' : currentStudent.rollNumber;
   const studentAvatar = currentStudent.id === 'stu-101' ? rounitPhoto : (currentStudent.avatar || rounitPhoto);
 
   const triggerCelebration = () => {
@@ -183,7 +183,7 @@ export const StudentDashboard: React.FC = () => {
               </h1>
               
               <div className="inline-flex items-center gap-1.5 mt-1 px-2.5 py-0.5 rounded-full bg-[#F4EFE6] text-stone-700 text-xs font-mono font-bold border border-[#DDD0BC]">
-                <span>Roll: {currentStudent.id === 'stu-101' ? '21051042' : currentStudent.rollNumber}</span>
+                <span>Roll: {currentStudent.id === 'stu-101' ? '23051042' : currentStudent.rollNumber}</span>
               </div>
 
               {/* College Badge */}
@@ -415,7 +415,7 @@ export const StudentDashboard: React.FC = () => {
                   </h3>
                   <div className="text-xs text-stone-700 leading-relaxed max-w-2xl space-y-1 font-medium font-sans">
                     <p>
-                      "You are scheduled with <strong>{activeBooking ? activeBooking.interviewerName : 'Siddharth Roy (Lead AI Architect)'}</strong> on <strong>{activeBooking ? `${activeBooking.date} at ${activeBooking.startTime} IST` : 'Thursday, Nov 14 at 04:30 PM IST'}</strong>."
+                      "You are scheduled with <strong>{activeBooking ? `${activeBooking.interviewerName} (${activeBooking.interviewerTitle}, Accenture)` : 'Siddharth Roy (Lead AI Architect, Accenture)'}</strong> on <strong>{activeBooking ? `${activeBooking.date} at ${activeBooking.startTime} IST` : 'Thursday, Nov 14 at 04:30 PM IST'}</strong>."
                     </p>
                     <ul className="list-disc pl-4 space-y-0.5 text-stone-600 text-[11px]">
                       <li><strong>Platform:</strong> Google Meet (link unlocks 15 mins before call on your dashboard).</li>

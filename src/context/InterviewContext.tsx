@@ -65,7 +65,7 @@ interface InterviewContextType {
 
 const InterviewContext = createContext<InterviewContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'grit_interview_system_v8_rounit_kiit';
+const STORAGE_KEY = 'grit_interview_system_v9_rounit_kiit_accenture';
 
 export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   // Initialize state with localStorage or defaults
@@ -84,7 +84,12 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         'grit_interview_system_v6_rounit_kiit_slots',
         'grit_interview_system_v6_rounit_kiit_audit',
         'grit_interview_system_v7_rounit_kiit_students',
-        'grit_interview_system_v7_rounit_kiit_bookings'
+        'grit_interview_system_v7_rounit_kiit_bookings',
+        'grit_interview_system_v8_rounit_kiit_students',
+        'grit_interview_system_v8_rounit_kiit_bookings',
+        'grit_interview_system_v8_rounit_kiit_interviewers',
+        'grit_interview_system_v8_rounit_kiit_slots',
+        'grit_interview_system_v8_rounit_kiit_audit'
       ];
       keysToClean.forEach(k => localStorage.removeItem(k));
     } catch (_) {}
@@ -98,7 +103,7 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
           ? { 
               ...s, 
               name: 'Rounit Srivastava', 
-              rollNumber: '21051042', 
+              rollNumber: '23051042', 
               email: 'rounit.srivastava@kiit.ac.in', 
               college: 'KIIT University, Bhubaneswar', 
               avatar: '/rounit-photo.png' 
@@ -133,14 +138,14 @@ export const InterviewProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         timestamp: new Date(Date.now() - 3600000 * 24 * 3).toISOString(),
         action: 'OUTCOME_RECORDED',
         actor: 'Siddharth Roy',
-        details: 'Evaluated Vikram Malhotra (21BCS0914) - Result: PASS (Score: 9.2/10). Track Badge Issued.',
+        details: 'Evaluated Vikram Malhotra (23050914) - Result: PASS (Score: 9.2/10). Track Badge Issued.',
       },
       {
         id: 'log-2',
         timestamp: new Date(Date.now() - 3600000 * 24 * 2).toISOString(),
         action: 'OUTCOME_RECORDED',
         actor: 'Ananya Sharma',
-        details: 'Evaluated Tanya Reddy (21BCE1342) - Result: RETAKE_REQUESTED. Concurrency test re-attempt.',
+        details: 'Evaluated Tanya Reddy (23051342) - Result: RETAKE_REQUESTED. Concurrency test re-attempt.',
       }
     ];
   });

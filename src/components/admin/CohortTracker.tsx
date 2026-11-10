@@ -260,7 +260,7 @@ export const CohortTracker: React.FC = () => {
                               {student.id === 'stu-101' ? 'Rounit Srivastava' : student.name}
                             </div>
                             <div className="text-[11px] text-stone-500 font-mono font-medium">
-                              {student.id === 'stu-101' ? '21051042' : student.rollNumber} • {student.college.split(',')[0]}
+                              {student.id === 'stu-101' ? '23051042' : student.rollNumber} • {student.college.split(',')[0]}
                             </div>
                             <div className="text-[10px] text-amber-700 font-black mt-0.5">
                               {student.currentMiles.toLocaleString()} Miles

@@ -93,7 +93,7 @@ export const Navbar: React.FC = () => {
                 >
                   {students.map((s) => {
                     const name = s.id === 'stu-101' ? 'Rounit Srivastava' : s.name;
-                    const roll = s.id === 'stu-101' ? '21051042' : s.rollNumber;
+                    const roll = s.id === 'stu-101' ? '23051042' : s.rollNumber;
                     return (
                       <option key={s.id} value={s.id} className="bg-white text-stone-800">
                         {name} ({roll})
