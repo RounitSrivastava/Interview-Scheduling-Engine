@@ -35,8 +35,6 @@ const MainLayout: React.FC = () => {
 
           <div className="flex items-center gap-3 font-heading text-stone-500 font-semibold">
             <span>KIIT University • School of Computer Engineering</span>
-            <span className="text-stone-300">•</span>
-            <span>Rounit Srivastava (23051042)</span>
           </div>
         </div>
       </footer>
